@@ -7,6 +7,7 @@ import com.chyrus.chyrus.BaseApps;
 import com.chyrus.chyrus.R;
 import com.chyrus.chyrus.presenter.splash.SplashPresenter;
 import com.chyrus.chyrus.presenter.splash.SplashPresenterImp;
+import com.chyrus.chyrus.view.main.MainActivity;
 
 /**
  * Created by Chyrus on 5/20/17.
@@ -24,13 +25,13 @@ public class SplashActivity extends BaseApps implements SplashView {
     }
 
     @Override public void showAlert() {
-        showToast("Hai, selamat datang!");
+        showToastLong("Welcome to Chyrus Apps");
     }
 
     @Override public void goMain() {
         //go MainActivity
-//        startActivity(new Intent(this, MainActivity.class));
-//        finish();
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 
 }

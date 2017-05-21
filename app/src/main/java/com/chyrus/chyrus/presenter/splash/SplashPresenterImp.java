@@ -1,5 +1,7 @@
 package com.chyrus.chyrus.presenter.splash;
 
+import android.os.Handler;
+
 import com.chyrus.chyrus.view.splash.SplashView;
 
 /**
@@ -16,6 +18,12 @@ public class SplashPresenterImp implements SplashPresenter {
 
     @Override
     public void waitSplash(int duration) {
-
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                view.showAlert();
+                view.goMain();
+            }
+        },duration);
     }
 }
