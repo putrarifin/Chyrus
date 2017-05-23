@@ -1,6 +1,9 @@
 package com.chyrus.chyrus;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
@@ -62,6 +65,12 @@ public class BaseApps extends AppCompatActivity {
         if (progressDialog.isShowing()) {
             progressDialog.dismiss();
         }
+    }
+
+    protected boolean isInternetConnectionAvailable() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        return activeNetwork.isConnectedOrConnecting();
     }
 
 }

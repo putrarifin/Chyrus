@@ -8,6 +8,7 @@ import com.chyrus.chyrus.R;
 import com.chyrus.chyrus.presenter.splash.SplashPresenter;
 import com.chyrus.chyrus.presenter.splash.SplashPresenterImp;
 import com.chyrus.chyrus.view.main.MainActivity;
+import com.chyrus.chyrus.view.movie.MovieActivity;
 
 /**
  * Created by Chyrus on 5/20/17.
@@ -30,7 +31,7 @@ public class SplashActivity extends BaseApps implements SplashView {
 
     @Override public void goMain() {
         //go MainActivity
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, MovieActivity.class));
         finish();
     }
 

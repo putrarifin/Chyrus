@@ -1,4 +1,4 @@
-package com.chyrus.chyrus.models;
+package com.chyrus.chyrus.models.github;
 
 
 import com.google.gson.annotations.SerializedName;
